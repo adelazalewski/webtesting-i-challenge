@@ -144,6 +144,15 @@ describe("item functions", () => {
         expect(enhancer.fail({
             name: "fail test",
             durability: 15,
+            enhancement: 14
+        })).toEqual({
+            name: "fail test",
+            durability: 10,
+            enhancement: 14
+        })
+        expect(enhancer.fail({
+            name: "fail test",
+            durability: 15,
             enhancement: 0
         })).toEqual({
             name: "fail test",
